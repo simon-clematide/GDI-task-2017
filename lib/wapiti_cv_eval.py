@@ -5,14 +5,17 @@
 compute mean and stddev from wapiti
 """
 
+import codecs
 import re
 import sys
+
+import numpy as np
 
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 sys.stderr = codecs.getwriter("utf-8")(sys.stderr.detach())
 sys.stdin = codecs.getreader("utf-8")(sys.stdin.detach())
 
-import numpy as np
+
 
 data = []
 accuracy = []
