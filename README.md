@@ -25,11 +25,11 @@ Execute all commands from the top directory of GDI-task-2017 directory.
      - create all the models and output for runs 1 (Naive Bayes) and 3 (NB, SVM, CRF ensemble) (using the results of run 2)
      - creates the data variants (augmented data, replacements) for the LSTM models
      
-   - ``for var in model+charrep+augm model+charrep-augm model-charrep+augm model-charrep-augm ; do python3 lib/LSTM_models.py $var ; done``
+   - ``for var in model+charrep+augm model+charrep-augm model-charrep+augm model-charrep-augm ; do python3 lib/LSTM_models_emb.py $var ; done``
 	 - trains 4 different LSTM models *with* character embeddings as described in the paper
 	 - takes some hours on non-GPUs
  
-   - ``for var in model+charrep+augm model+charrep-augm model-charrep+augm model-charrep-augm ; do  python3 lib/LSTM_models_emb.py $var ; done``
+   - ``for var in model+charrep+augm model+charrep-augm model-charrep+augm model-charrep-augm ; do  python3 lib/LSTM_models_no_emb.py $var ; done``
 	 - trains 4 different LSTM models *without* character embeddings as described in the paper
 	 - NOTE: This script seems to have problems when run on CPU. Therefore, GPU needed for now.
 
