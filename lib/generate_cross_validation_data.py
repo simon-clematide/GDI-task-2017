@@ -61,11 +61,11 @@ if not os.path.exists(path):
     os.mkdir(path)
 decoder = dict((v, k) for k, v in encoder.items())
 rows = [(data[i], decoder[targets[i]]) for i in test_idx]
-with open(os.path.join(path, 'test.tsv'), 'w') as w:
+with open(os.path.join(path, 'test.tsv'), 'w', encoding='utf-8') as w:
     csv.writer(w, delimiter='\t').writerows(rows)
 
 trainrows = [(data[i], decoder[targets[i]]) for i in train_idx]
-with open(os.path.join(path, 'train.tsv'), 'w') as w:
+with open(os.path.join(path, 'train.tsv'), 'w', encoding='utf-8') as w:
     csv.writer(w, delimiter='\t').writerows(trainrows)
 
 for f in folds:
