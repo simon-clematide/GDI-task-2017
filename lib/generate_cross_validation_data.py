@@ -74,7 +74,7 @@ for f in folds:
                          (f['val_idx'], 'test_%d.tsv')]:
         fn = os.path.join(path, fn_ % idx)
         rows = [(data[i], decoder[targets[i]]) for i in indexes]
-        with open(fn, 'w') as w:
+        with open(fn, 'w', encoding='utf-8') as w:
             csv.writer(w, delimiter='\t').writerows(rows)
 
 # run some tests on the data to make sure it's fine
@@ -105,7 +105,7 @@ def default(o):
 
 json_filename = "folds.json"
 
-with open(os.path.join(path, json_filename), 'w') as f:
+with open(os.path.join(path, json_filename), 'w', encoding='utf-8') as f:
     print(json.dumps({'test_idx' : list(test_idx),
                   'cv_idx' : folds},
                  indent=True,ensure_ascii=True,default=default),file=f)
