@@ -8,6 +8,10 @@ compute mean and stddev from wapiti
 import re
 import sys
 
+sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+sys.stderr = codecs.getwriter("utf-8")(sys.stderr.detach())
+sys.stdin = codecs.getreader("utf-8")(sys.stdin.detach())
+
 import numpy as np
 
 data = []
@@ -16,7 +20,7 @@ for a in sys.argv[1:]:
     if not a.endswith('err'):
         continue
     print('#reading', a, file=sys.stderr)
-    with open(a, 'r') as f:
+    with open(a, 'r', encoding='utf-8') as f:
         for l in f:
             #     Sequence error: 12.12%
             if 'Sequence error' in l:
