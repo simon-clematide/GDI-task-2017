@@ -1,8 +1,7 @@
 # CLUZH submission for VarDial 2017 Workshop Task "German Dialect Identification" (GDI)
 
-STILL WORK IN PROGRESS
 
-This repository contains the code and data for reproducing our approach as described in our paper.
+This repository contains the code and data for reproducing our approach as described in our EACL 2017 [VarDial Workshop Paper](http://web.science.mq.edu.au/~smalmasi/vardial4/pdf/VarDial21.pdf).
 
 ### Prerequisites for running the code under Linux/MacOS:
   - our tested environment: Anaconda 4.3.0 with Python 3 https://www.continuum.io/downloads and Keras 1
@@ -32,5 +31,5 @@ Execute all commands from the top directory of GDI-task-2017 directory.
  
    - ``for var in model+charrep+augm model+charrep-augm model-charrep+augm model-charrep-augm ; do  python3 lib/LSTM_models_emb.py $var ; done``
 	 - trains 4 different LSTM models *without* character embeddings as described in the paper
-	 - takes some hours on non-GPUs
+	 - NOTE: This script seems to have problems when run on CPU. Therefore, GPU needed for now.
 
