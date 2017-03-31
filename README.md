@@ -1,7 +1,7 @@
 # CLUZH submission for VarDial 2017 Workshop Task "German Dialect Identification" (GDI)
 
 
-This repository contains the code and data for reproducing our approach as described in our EACL 2017 [VarDial Workshop Paper](http://web.science.mq.edu.au/~smalmasi/vardial4/pdf/VarDial21.pdf).
+This repository contains the code and data for reproducing our approach as described in our EACL 2017 [VarDial Workshop Paper](http://web.science.mq.edu.au/~smalmasi/vardial4/pdf/VarDial21.pdf) and [Poster](https://github.com/simon-clematide/GDI-task-2017/blob/master/eacl17_vardial_ws_poster/gdi-poster.pdf).
 
 ### Prerequisites for running the code under Linux/MacOS:
   - our tested environment: Anaconda 4.3.0 with Python 3 https://www.continuum.io/downloads and Keras 1
